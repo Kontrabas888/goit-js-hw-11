@@ -1,1 +1,96 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+.body-color {
+  background-image: linear-gradient(
+      to right,
+      rgba(31, 28, 28, 0.7),
+      rgba(51, 49, 49, 0.7)
+    ),
+    url(https://pixabay.com/get/g39bd57ca8a1a726cd9ac18528c9e65f0a0ba3b2d72e7f90704fbd8639b76b43b38effb87249320a5c2e921530b6b2dced294924bbd131d22a3a899d5179b2278_1280.jpg);
+}
+
+.gallery {
+  display: grid;
+  max-width: 1500px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+  width: 300px;
+}
+
+.info-item {
+  font-size: 10px;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #c7d3ff;
+}
+
+.gallery__image:hover {
+  transform: scale(1.03);
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.search-form {
+  background-image: url(https://pixabay.com/get/geda21195d89690a60e128e96d4817c29cf7bbbd7f81a7d1a8b1d179f8244a72ee1fd11b920610ddd3ac3d2d833d1334bbe894971ec12d4dcc9887b16b93bf2ee_1280.jpg);
+  text-align: center;
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.input-search {
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gallery__image {
+  border: 1px solid #55c5e9;
+  padding: 3px;
+  background: #666;
+}
+
+.Search {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  background-color: rgb(54, 143, 250);
+  color: #fff;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.load-more {
+  display: none;
+  max-width: 1500px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(54, 143, 250);
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.load-more:hover {
+  transform: scale(1.03);
+  transition: transform var(--animation-duration) var(--timing-function);
+  cursor: pointer;
+}
